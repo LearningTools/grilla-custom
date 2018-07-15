@@ -25,7 +25,7 @@
 
 [class*="col-"]{
 	float:left;
-	border:1px solid black;/*Comentar cuando se vaya a usar el archivo de grilla*/
+	/*border:1px solid black;Comentar cuando se vaya a usar el archivo de grilla*/
 	padding:10px;
 	box-sizing: border-box;
 }
