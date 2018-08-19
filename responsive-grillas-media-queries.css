@@ -1,3 +1,74 @@
+:root{
+/*variables fuentes predeterminadas*/ 
+--font-primary: sans-serif;
+--font-secondary: serif;
+	
+/* establecer valores base*/
+--text-base-size: 1em;
+--text-scale-ratio: 1.2;
+--baseline: 24px;
+	
+ /* tipo de escala*/
+--text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+--text-sm: calc(1em / var(--text-scale-ratio));
+--text-md: calc(1em * var(--text-scale-ratio));
+--text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+--text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+--text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+--text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+/* Ejemplos para la escala a nuestro diseño*/
+/*
+h1, .text--xxl {
+    font-size: var(--text-xxl);
+}
+
+h2, .text--xl {
+    font-size: var(--text-xl);
+}
+
+h3, .text--lg {
+    font-size: var(--text-lg);
+}
+
+h4, .text--md {
+    font-size: var(--text-md);
+}
+*/
+
+/* valores de espaciado */
+--space-sm:   calc(var(--baseline)/2);
+--space-md:   var(--baseline);
+--space-lg:   calc(var(--baseline)*2);
+--space-xl: calc(var(--baseline)*3);
+/* Ejemplo para el uso del espaciado*/
+	
+/*
+h1 {
+  margin-top: var(--space-lg);
+ 	-right
+	-bottom
+	-left
+	-top
+}
+
+h2 {
+  margin-bottom: var(--space-md);
+ 	-right
+	-bottom
+	-left
+	-top
+}
+
+p {
+  margin-bottom: var(--space-sm);
+ 	-right
+	-bottom
+	-left
+	-top
+}	
+*/
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,7 +95,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.4;
+	font-family: var(--font-primary);
+	font-size: var(--text-base-size);
 }
 ol, ul {
 	list-style: none;
@@ -77,6 +150,12 @@ table {
 /*---------- PANTALLA DE ESCRITORIO GRANDE - LARGE (lg) - revisamos en portatil o pc ----------*/
 
 @media(min-width:1200px){
+:root{
+--text-base-size: 2em;
+--text-scale-ratio: 2;
+--text-lg: calc(2em * var(--text-scale-ratio) * var(--text-scale-ratio));
+	
+}
 
 	.col-lg-12{width:100%;}
 	.col-lg-11{width:91.66666667%;}
@@ -113,7 +192,11 @@ table {
 
 
 @media(max-width:1199px) and (min-width:992px){
-
+:root{
+--text-base-size: 1.25em;;
+--text-scale-ratio: 1.25;
+--text-md: calc(1.25em * var(--text-scale-ratio));
+}
 	.col-md-12{width:100%;}
 	.col-md-11{width:91.66666667%;}
 	.col-md-10{width:83.33333333%;}
@@ -146,7 +229,11 @@ table {
 /*----------  PANTALLA DE TABLET - SMALL (sm) - revisamos en tablet vertical 768px  ----------*/
 
 @media(max-width:991px) and (min-width:768px){
-
+:root{
+--text-base-size: 0.75em;
+--text-scale-ratio: 0.75;
+--text-sm: calc(0.75em * var(--text-scale-ratio));
+}
 	.col-sm-12{width:100%;}
 	.col-sm-11{width:91.66666667%;}
 	.col-sm-10{width:83.33333333%;}
@@ -179,7 +266,11 @@ table {
 /*----------  PANTALLA DE PHONES - EXTRA SMALL (xs) - revisamos en movil horizontal 480px o vertical 320px  ----------*/
 
 @media(max-width:767px){
-
+:root{
+--text-base-size: 0.5em;
+--text-scale-ratio: 0.5;
+--text-xs: calc(0.5em * var(--text-scale-ratio));
+}
 	.col-xs-12{width:100%;}
 	.col-xs-11{width:91.66666667%;}
 	.col-xs-10{width:83.33333333%;}
