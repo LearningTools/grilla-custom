@@ -151,9 +151,9 @@ table {
 
 @media(min-width:1200px){
 :root{
---text-base-size: 2em;
+--text-base-size: 1em;
 --text-scale-ratio: 2;
---text-lg: calc(2em * var(--text-scale-ratio) * var(--text-scale-ratio));
+--text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
 	
 }
 
