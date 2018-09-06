@@ -1,4 +1,17 @@
 :root{
+/*ejemplo de scalar typografia
+::Por ejemplo, si queremos nuestro tamaño de fuente en un rango donde 14px es el tamaño mínimo en el ancho de viewport
+más pequeño de 300px y donde 26px es el tamaño máximo en el ancho de viewport más grande de 1600px, entonces nuestra ecuación
+se ve así:
+body {
+  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+}
+body {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+}
+*/
+
 /*variables fuentes predeterminadas*/ 
 --font-primary: sans-serif;
 --font-secondary: serif;
