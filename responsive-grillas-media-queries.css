@@ -54,13 +54,15 @@ body {
   font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 }
  **/
+*{
+	box-sizing: border-box;
+}
+
 body{
 	font-size: calc(14px + (26 - 14) * ((100vw - 320px) / (1600 - 320)));
 	line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 320px)/(1600 - 320)));
 }
 
-
-/*Estilos para el maquetado*/
 .contenedor-full {
 	width: 100%;
 	padding-right: 15px;
@@ -85,12 +87,20 @@ body{
 	clear:both;
 	display:table;
 }
+/*
+Mirar su comportamiento en produccíon de no convenser quitar la clase completa del after y tambien quitar
+el box-sizing que se encuentra arriba y colocarlo en la clase de col-
+ */
+.fila::after{
+	content: "";
+	clear: both;
+	display: table;
+}
 
 [class*="col-"]{
 	float:left;
 	/*border:1px solid black;Comentar cuando se vaya a usar el archivo de grilla*/
 	padding:10px;
-	box-sizing: border-box;
 }
 
 /*
@@ -128,7 +138,6 @@ body{
 
 
 }
-
 
 /* 
 ##Device = Laptops, Desktops
