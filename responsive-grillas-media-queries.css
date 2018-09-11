@@ -1,99 +1,17 @@
-:root{
-/*ejemplo de scalar typografia
-::Por ejemplo, si queremos nuestro tamaño de fuente en un rango donde 14px es el tamaño mínimo en el ancho de viewport
-más pequeño de 300px y donde 26px es el tamaño máximo en el ancho de viewport más grande de 1600px, entonces nuestra ecuación
-se ve así:
-body {
-  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-}
-body {
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
-}
-*/
-
-/*variables fuentes predeterminadas*/ 
---font-primary: sans-serif;
---font-secondary: serif;
-	
-/* establecer valores base*/
---text-base-size: 1em;
---text-scale-ratio: 1.2;
---baseline: 24px;
-	
- /* tipo de escala*/
---text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
---text-sm: calc(1em / var(--text-scale-ratio));
---text-md: calc(1em * var(--text-scale-ratio));
---text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
---text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
---text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
---text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-/* Ejemplos para la escala a nuestro diseño*/
-/*
-h1, .text--xxl {
-    font-size: var(--text-xxl);
-}
-
-h2, .text--xl {
-    font-size: var(--text-xl);
-}
-
-h3, .text--lg {
-    font-size: var(--text-lg);
-}
-
-h4, .text--md {
-    font-size: var(--text-md);
-}
-*/
-
-/* valores de espaciado */
---space-sm:   calc(var(--baseline)/2);
---space-md:   var(--baseline);
---space-lg:   calc(var(--baseline)*2);
---space-xl: calc(var(--baseline)*3);
-/* Ejemplo para el uso del espaciado*/
-	
-/*
-h1 {
-  margin-top: var(--space-lg);
- 	-right
-	-bottom
-	-left
-	-top
-}
-
-h2 {
-  margin-bottom: var(--space-md);
- 	-right
-	-bottom
-	-left
-	-top
-}
-
-p {
-  margin-bottom: var(--space-sm);
- 	-right
-	-bottom
-	-left
-	-top
-}	
-*/
-}
+/*----------  Reset Estilos  ----------*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
+menu, nav, output, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -127,6 +45,21 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/**EJEMPLO PARA ESCALAR TIPOGRAFIA.
+Por ejemplo, si queremos nuestro tamaño de fuente en un rango donde 14px es el tamaño mínimo en el ancho de viewport
+más pequeño de 300px y donde 26px es el tamaño máximo en el ancho de viewport más grande de 1600px, entonces nuestra ecuación
+se ve así:
+body {
+  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+}
+ **/
+body{
+	font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+	line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+}
+
+
 /*Estilos para el maquetado*/
 .contenedor-full {
 	width: 100%;
@@ -160,15 +93,83 @@ table {
 	box-sizing: border-box;
 }
 
-/*---------- PANTALLA DE ESCRITORIO GRANDE - LARGE (lg) - revisamos en portatil o pc ----------*/
+/*
+##Device = Desktops
+##Screen = 1281px a escritorios de mayor resolución
+*/
+@media(min-width:1281px){
+	.col-xxl-12{width:100%;}
+	.col-xxl-11{width:91.66666667%;}
+	.col-xxl-10{width:83.33333333%;}
+	.col-xxl-9{width:75%;}
+	.col-xxl-8{width:66.66666667%;}
+	.col-xxl-7{width:58.33333333%;}
+	.col-xxl-6{width:50%;}
+	.col-xxl-5{width:41.66666667%;}
+	.col-xxl-4{width: 33.33333333%;}
+	.col-xxl-3{width: 25%;}
+	.col-xxl-2 {width: 16.66666667%;}
+	.col-xxl-1 {width: 8.33333333%;}
+	.col-xxl-0 {display:none;}
 
-@media(min-width:1200px){
-:root{
---text-base-size: 1em;
---text-scale-ratio: 2;
---text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
-	
+	.col-xxl-offset-12{margin-left:100%;}
+	.col-xxl-offset-11{margin-left:91.66666667%;}
+	.col-xxl-offset-10{margin-left:83.33333333%;}
+	.col-xxl-offset-9{margin-left: 75%;}
+	.col-xxl-offset-8{margin-left: 66.66666667%;}
+	.col-xxl-offset-7{margin-left: 58.33333333%;}
+	.col-xxl-offset-6{margin-left: 50%;}
+	.col-xxl-offset-5{margin-left: 41.66666667%;}
+	.col-xxl-offset-4{margin-left: 33.33333333%;}
+	.col-xxl-offset-3{margin-left: 25%;}
+	.col-xxl-offset-2{margin-left: 16.66666667%;}
+	.col-xxl-offset-1{margin-left: 8.33333333%;}
+	.col-xxl-offset-0 {margin-left: 0;}
+
+
 }
+
+
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px a 1280px
+*/
+@media(min-width:1025px) and (max-width:1280px){
+
+	.col-xl-12{width:100%;}
+	.col-xl-11{width:91.66666667%;}
+	.col-xl-10{width:83.33333333%;}
+	.col-xl-9{width:75%;}
+	.col-xl-8{width:66.66666667%;}
+	.col-xl-7{width:58.33333333%;}
+	.col-xl-6{width:50%;}
+	.col-xl-5{width:41.66666667%;}
+	.col-xl-4{width: 33.33333333%;}
+	.col-xl-3{width: 25%;}
+	.col-xl-2{width: 16.66666667%;}
+	.col-xl-1{width: 8.33333333%;}
+	.col-xl-0 {display:none;}
+
+	.col-xl-offset-12{margin-left:100%;}
+	.col-xl-offset-11{margin-left:91.66666667%;}
+	.col-xl-offset-10{margin-left:83.33333333%;}
+	.col-xl-offset-9{margin-left: 75%;}
+	.col-xl-offset-8{margin-left: 66.66666667%;}
+	.col-xl-offset-7{margin-left: 58.33333333%;}
+	.col-xl-offset-6{margin-left: 50%;}
+	.col-xl-offset-5{margin-left: 41.66666667%;}
+	.col-xl-offset-4{margin-left: 33.33333333%;}
+	.col-xl-offset-3{margin-left: 25%;}
+	.col-xl-offset-2{margin-left: 16.66666667%;}
+	.col-xl-offset-1{margin-left: 8.33333333%;}
+	.col-xl-offset-0 {margin-left: 0;}
+}
+
+/* 
+##Device = Tablets, Ipads (vertical)
+##Screen = B/w 768px a 1024px
+*/
+@media(min-width:768px) and (max-width:1024px){
 
 	.col-lg-12{width:100%;}
 	.col-lg-11{width:91.66666667%;}
@@ -180,8 +181,8 @@ table {
 	.col-lg-5{width:41.66666667%;}
 	.col-lg-4{width: 33.33333333%;}
 	.col-lg-3{width: 25%;}
-	.col-lg-2 {width: 16.66666667%;}
-	.col-lg-1 {width: 8.33333333%;}
+	.col-lg-2{width: 16.66666667%;}
+	.col-lg-1{width: 8.33333333%;}
 	.col-lg-0 {display:none;}
 
 	.col-lg-offset-12{margin-left:100%;}
@@ -197,19 +198,14 @@ table {
 	.col-lg-offset-2{margin-left: 16.66666667%;}
 	.col-lg-offset-1{margin-left: 8.33333333%;}
 	.col-lg-offset-0 {margin-left: 0;}
-
-
 }
 
-/*---------- PANTALLA DE ESCRITORIO MEDIANO - MEDIUM (md) - revisamos en tablet horizontal 1024px  ----------*/
+/* 
+##Device = Tablets, Ipads (horizontal)
+##Screen = B/w 768px a 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
-
-@media(max-width:1199px) and (min-width:992px){
-:root{
---text-base-size: 1.25em;;
---text-scale-ratio: 1.25;
---text-md: calc(1.25em * var(--text-scale-ratio));
-}
 	.col-md-12{width:100%;}
 	.col-md-11{width:91.66666667%;}
 	.col-md-10{width:83.33333333%;}
@@ -237,16 +233,14 @@ table {
 	.col-md-offset-2{margin-left: 16.66666667%;}
 	.col-md-offset-1{margin-left: 8.33333333%;}
 	.col-md-offset-0 {margin-left: 0;}
-
-
-/*----------  PANTALLA DE TABLET - SMALL (sm) - revisamos en tablet vertical 768px  ----------*/
-
-@media(max-width:991px) and (min-width:768px){
-:root{
---text-base-size: 0.75em;
---text-scale-ratio: 0.75;
---text-sm: calc(0.75em * var(--text-scale-ratio));
 }
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Horizontal)
+##Screen = B/w 481px a 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+
 	.col-sm-12{width:100%;}
 	.col-sm-11{width:91.66666667%;}
 	.col-sm-10{width:83.33333333%;}
@@ -276,14 +270,14 @@ table {
 	.col-sm-offset-0 {margin-left: 0;}
 
 
-/*----------  PANTALLA DE PHONES - EXTRA SMALL (xs) - revisamos en movil horizontal 480px o vertical 320px  ----------*/
-
-@media(max-width:767px){
-:root{
---text-base-size: 0.5em;
---text-scale-ratio: 0.5;
---text-xs: calc(0.5em * var(--text-scale-ratio));
 }
+
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
 	.col-xs-12{width:100%;}
 	.col-xs-11{width:91.66666667%;}
 	.col-xs-10{width:83.33333333%;}
