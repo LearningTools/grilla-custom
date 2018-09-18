@@ -25,11 +25,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1.4;
-	font-family: var(--font-primary);
-	font-size: var(--text-base-size);
-}
 ol, ul {
 	list-style: none;
 }
@@ -54,10 +49,6 @@ body {
   font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 }
  **/
-*{
-	box-sizing: border-box;
-}
-
 body{
 	font-size: calc(14px + (26 - 14) * ((100vw - 320px) / (1600 - 320)));
 	line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 320px)/(1600 - 320)));
@@ -65,16 +56,16 @@ body{
 
 .contenedor-full {
 	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 0;
+	padding-left: 0;
 	margin-right: auto;
 	margin-left: auto;
 }
 
 .contenedor {
 	width: 90%;
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 0;
+	padding-left: 0;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -86,21 +77,13 @@ body{
 	height: auto;
 	clear:both;
 	display:table;
-}
-/*
-Mirar su comportamiento en produccíon de no convenser quitar la clase completa del after y tambien quitar
-el box-sizing que se encuentra arriba y colocarlo en la clase de col-
- */
-.fila::after{
-	content: "";
-	clear: both;
-	display: table;
+	box-sizing: border-box;
 }
 
 [class*="col-"]{
 	float:left;
 	/*border:1px solid black;Comentar cuando se vaya a usar el archivo de grilla*/
-	padding:10px;
+	padding: 0;
 }
 
 /*
