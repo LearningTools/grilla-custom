@@ -78,19 +78,9 @@ table {
 	border-spacing: 0;
 }
 
-/**EJEMPLO PARA ESCALAR TIPOGRAFIA.
-Por ejemplo, si queremos nuestro tamaño de fuente en un rango donde 14px es el tamaño mínimo en el ancho de viewport
-más pequeño de 320px y donde 26px es el tamaño máximo en el ancho de viewport más grande de 1600px, entonces nuestra ecuación
-se ve así:
-body {
-  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-}
- **/
 body{
-	font-size: 16px;
-	line-height: 1.2;
-	/**font-size: calc(14px + (26 - 14) * ((100vw - 320px) / (1600 - 320)));
-	line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 320px)/(1600 - 320)));**/
+	font-size: 1rem;
+	line-height: 1.5;
 }
 
 .contenedor-full {
