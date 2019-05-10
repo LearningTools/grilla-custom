@@ -425,4 +425,15 @@ background-color: #ff5555;
   width: 100%;
 }
 
+/*clase para centrar contenido entro de un contenedor o columna*/
+.contenido-centrado{
+	position: absolute;
+	left: 50%;
+	--webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 100%;
+	max-width: 880px;
+}
+
 /*=====  End of componentes css  ======*/
