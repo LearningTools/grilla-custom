@@ -80,6 +80,10 @@ a:hover, a:focus {
   color: #3091B2;
   text-decoration: none;
 }
+
+img{
+  vertical-align: middle;
+}
 /* HTML5 restablecimiento de la función de visualización para navegadores antiguos */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -213,5 +217,96 @@ margin-left: auto;
 @media(min-width: 320px) and (max-width: 480px){
 	.col-xs-12{width: 100%;}
 }
-
 /*=====  End of media Queries  ======*/
+
+
+/*=====================================
+=            componentes css          =
+=====================================*/
+
+/*Estas clases para la imagen afectan solo al tag <img>*/
+.img-redondeada{
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  transition: opacity 0.5s ease 0s;
+}
+
+.img-circulo{
+  background-color: #FFFFFF;
+  margin-bottom: 10px;
+  padding: 0px;
+  border-radius: 50%;
+}
+
+.img-miniatura{
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 0 none;
+    border-radius: 8px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 1px 2px rgba(164, 158, 147, 0.6);
+    margin-bottom: 10px;
+}
+
+/*Volver imagen flexible*/
+.img-responsiva{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*Estilos para los inputs .form-grupo > input.form-control*/
+.form-grupo {
+  margin-bottom: 15px;
+}
+.form-control::-moz-placeholder {
+  color: #DDDDDD;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.form-control:-moz-placeholder {
+  color: #DDDDDD;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.form-control::-webkit-input-placeholder {
+  color: #DDDDDD;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.form-control:-ms-input-placeholder {
+  color: #DDDDDD;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.form-control {
+  background-color: #fffcf5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #66615b;
+  font-size: 16px;
+  transition: background-color 0.3s ease 0s;
+  padding: 4px 12px;
+  height: 30px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control:focus {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0 !important;
+  border: 1px solid #337ab7;
+}
+.input-full{
+ width: 100%;
+}
+
+/*=====  End of componentes css  ======*/
