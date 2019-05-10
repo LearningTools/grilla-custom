@@ -309,4 +309,61 @@ margin-left: auto;
  width: 100%;
 }
 
+/*Estilos botones*/
+.btn{
+  border-width: 2px;
+  font-weight: 400;
+  font-size: 0.8571em;
+  line-height: 1.35em;
+  margin: 5px 1px;
+  cursor: pointer;
+  background-color: #888;
+  color: #FFFFFF;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: .5rem .75rem;
+  border-radius: .25rem;
+  transition: all .15s ease-in-out;
+}
+.btn:hover{
+  background-color: #979797;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+}
+
+/*Elige tu color primario acorde al color resaltante en la pagina web*/
+.btn-primary{
+  background-color: #f96332;
+}
+/*cambiar el color con colorhexa.com*/
+.btn-primary:hover {
+  background-color: #fa7a50;
+}
+.btn-info{
+  background-color: #2CA8FF;
+}
+.btn-info:hover{
+  background-color: #4bb5ff;
+}
+
+.btn-success{
+  background-color: #18ce0f;
+}
+.btn-success:hover{
+background-color: #1beb11;
+}
+
+.btn-warning{
+ background-color: #FFB236;
+}
+.btn-warning:hover{
+    background-color: #ffbe55;
+}
+.btn-danger{
+background-color: #FF3636;
+}
+.btn-danger:hover{
+background-color: #ff5555;
+}
+
 /*=====  End of componentes css  ======*/
