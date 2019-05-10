@@ -61,9 +61,24 @@ p {
   font-size: 16px;
   line-height: 1.4em;
 }
+small{
+  color: #9A9A9A;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4em;
+}
 
-a{
-	text-decoration: none;
+a {
+  color: #68B3C8;
+  -webkit-transition: all 150ms linear;
+  -moz-transition: all 150ms linear;
+  -o-transition: all 150ms linear;
+  -ms-transition: all 150ms linear;
+  transition: all 150ms linear;
+}
+a:hover, a:focus {
+  color: #3091B2;
+  text-decoration: none;
 }
 /* HTML5 restablecimiento de la función de visualización para navegadores antiguos */
 article, aside, details, figcaption, figure, 
