@@ -1,5 +1,6 @@
+/*-------Tipografia por defecto---------*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
 /*----------  Reset Estilos  ----------*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -78,9 +79,12 @@ table {
 	border-spacing: 0;
 }
 
-body{
-	font-size: 1rem;
-	line-height: 1.5;
+body{	
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	color: #66615b;
+	background-color: #fff;
+	line-height: 1.42857143;
 }
 
 .contenedor-full {
